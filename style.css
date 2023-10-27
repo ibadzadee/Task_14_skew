@@ -86,8 +86,10 @@ nav .text p a {
 
 .sec-1 {
   width: 100%;
-  background-color: black;
+  background-color: aliceblue;
   padding: 100px 0px;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), 0 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), 0 100%);
 }
 .sec-1 .sec-1-center {
   width: 100%;
@@ -97,23 +99,194 @@ nav .text p a {
   gap: 50px;
   padding: 0px 20px;
 }
-.sec-1 .sec-1-center div {
-  background-color: blueviolet;
-}
 .sec-1 .sec-1-center .left {
+  background-image: url("https://preview.colorlib.com/theme/gourmet/img/hero_1.jpg.webp");
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 500px;
+  height: 350px;
+}
+.sec-1 .sec-1-center .right {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.sec-1 .sec-1-center .right h1 {
+  font-size: 50px;
+  position: relative;
+}
+.sec-1 .sec-1-center .right h1:after {
+  content: "";
+  background-color: #ff7404;
+  top: -10px;
+  left: 0px;
+  position: absolute;
+  width: 100px;
+  height: 3px;
+}
+.sec-1 .sec-1-center .right p {
+  color: #868e96;
+  width: 80%;
+  font-size: 20px;
+  padding: 10px 0px;
+}
+.sec-1 .sec-1-center .right img {
+  width: 150px;
+  height: 100px;
+}
+
+.sec-2 {
+  width: 100%;
+  background-color: white;
+  padding: 50px 0px;
+}
+.sec-2 .sec-2-center {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.sec-2 .sec-2-center .top {
+  color: white;
+  width: 50%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.sec-2 .sec-2-center .top h1 {
+  color: black;
+  font-size: 60px;
+  position: relative;
+}
+.sec-2 .sec-2-center .top h1:after {
+  content: "";
+  background-color: #ff7404;
+  top: -20px;
+  left: 40%;
+  position: absolute;
+  width: 100px;
+  height: 3px;
+}
+.sec-2 .sec-2-center .top p {
+  padding: 20px 0px;
+  font-size: 18px;
+  color: #868e96;
+}
+.sec-2 .sec-2-center .bottom {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
+}
+.sec-2 .sec-2-center .bottom div {
+  background-color: coral;
   background-size: cover;
   -o-object-fit: cover;
      object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
-.sec-1 .sec-1-center .right p {
-  width: 50%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
+.sec-2 .sec-2-center .bottom .first {
+  background-image: url(https://preview.colorlib.com/theme/gourmet/img/dishes_1.jpg);
 }
-.sec-1 .sec-1-center .right img {
+.sec-2 .sec-2-center .bottom .second {
+  background-image: url(https://preview.colorlib.com/theme/gourmet/img/about_1.jpg);
+}
+.sec-2 .sec-2-center .bottom .third {
+  background-image: url(https://preview.colorlib.com/theme/gourmet/img/dishes_3.jpg);
+}
+
+.sec-3 {
+  width: 100%;
+  background-color: white;
+  padding: 200px 0px;
+}
+.sec-3 .sec-3-center {
+  width: 100%;
+  height: 600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.sec-3 .sec-3-center .top {
+  color: white;
+  width: 50%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.sec-3 .sec-3-center .top h1 {
+  color: black;
+  font-size: 60px;
+  position: relative;
+}
+.sec-3 .sec-3-center .top h1:after {
+  content: "";
+  background-color: #ff7404;
+  top: -20px;
+  left: 40%;
+  position: absolute;
   width: 100px;
-  height: 100px;
+  height: 3px;
+}
+.sec-3 .sec-3-center .top p {
+  padding: 20px 0px;
+  font-size: 18px;
+  color: #868e96;
+}
+.sec-3 .sec-3-center .bottom {
+  width: 100%;
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 20px;
+}
+.sec-3 .sec-3-center .bottom div {
+  background-color: coral;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.sec-3 .sec-3-center .bottom div img {
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  transition: all 1s ease;
+}
+.sec-3 .sec-3-center .bottom div:after {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.sec-3 .sec-3-center .bottom div:hover img {
+  scale: 1.1;
 }/*# sourceMappingURL=style.css.map */
