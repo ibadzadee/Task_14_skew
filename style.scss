@@ -1,0 +1,128 @@
+@import "mixin";
+@import "variables";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1440px;
+    margin: auto;
+    padding: 0px 100px;
+    // background-color: cyan;
+}
+
+nav {
+    @include center(none, 20px 0px);
+    background-image: url(https://preview.colorlib.com/theme/gourmet/img/hero_1.jpg.webp);
+    @include img;
+    // padding-bottom: 1rem;
+    clip-path: polygon(0% 0%,
+            100% 0%,
+            100% calc(100% - 7rem),
+            0 100%);
+
+    .nav-center {
+        @include display(space-between, center);
+
+        a {
+            text-decoration: none;
+            font-size: 40px;
+            color: white;
+
+            &:hover {
+                color: $after-color;
+            }
+        }
+
+        ul {
+            @include display(space-around, center);
+            padding: 60px 0px;
+            gap: 20px;
+
+            li {
+                list-style: none;
+
+                a {
+                    font-size: 20px;
+                }
+
+            }
+        }
+    }
+
+    .text {
+        @include display;
+        flex-direction: column;
+        gap: 20px;
+        padding: 300px 300px;
+        text-align: center;
+
+        h1 {
+            font-size: 80px;
+            color: white;
+
+        }
+
+        p {
+            width: 150px;
+            height: 60px;
+            border: 3px solid white;
+            @include display;
+
+            &:hover {
+                background-color: white;
+                transition: 0.5s;
+
+                a {
+                    color: black;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+                padding: 10px;
+                font-size: 20px;
+
+            }
+        }
+
+    }
+
+}
+
+.sec-1{
+    @include center(black, 100px 0px);
+    .sec-1-center{
+        width: 100%;
+        height: 400px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 50px;
+        padding: 0px 20px;
+        div{
+            background-color: blueviolet;
+        }
+        .left{
+            @include img;
+        }
+        .right{
+            // padding-left: 400px;
+            p{
+                width: 50%;
+                // padding: 10px 0px;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+            
+            img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
+}
