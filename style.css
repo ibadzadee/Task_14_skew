@@ -210,6 +210,8 @@ nav .text p a {
   width: 100%;
   background-color: white;
   padding: 200px 0px;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), 0 100%);
+          clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), 0 100%);
 }
 .sec-3 .sec-3-center {
   width: 100%;
@@ -255,7 +257,7 @@ nav .text p a {
   grid-template-columns: repeat(3, auto);
   gap: 20px;
 }
-.sec-3 .sec-3-center .bottom div {
+.sec-3 .sec-3-center .bottom .first, .sec-3 .sec-3-center .bottom .second, .sec-3 .sec-3-center .bottom .third {
   background-color: coral;
   overflow: hidden;
   position: relative;
@@ -264,7 +266,19 @@ nav .text p a {
   align-items: center;
   cursor: pointer;
 }
-.sec-3 .sec-3-center .bottom div img {
+.sec-3 .sec-3-center .bottom .first .text, .sec-3 .sec-3-center .bottom .second .text, .sec-3 .sec-3-center .bottom .third .text {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-size: 40px;
+  gap: 30px;
+  color: white;
+}
+.sec-3 .sec-3-center .bottom .first img, .sec-3 .sec-3-center .bottom .second img, .sec-3 .sec-3-center .bottom .third img {
   background-size: cover;
   -o-object-fit: cover;
      object-fit: cover;
@@ -274,7 +288,7 @@ nav .text p a {
   height: 100%;
   transition: all 1s ease;
 }
-.sec-3 .sec-3-center .bottom div:after {
+.sec-3 .sec-3-center .bottom .first:after, .sec-3 .sec-3-center .bottom .second:after, .sec-3 .sec-3-center .bottom .third:after {
   content: "";
   position: absolute;
   background-color: rgba(0, 0, 0, 0.5);
@@ -287,6 +301,32 @@ nav .text p a {
   align-items: center;
   font-size: 30px;
 }
-.sec-3 .sec-3-center .bottom div:hover img {
+.sec-3 .sec-3-center .bottom .first:hover img, .sec-3 .sec-3-center .bottom .second:hover img, .sec-3 .sec-3-center .bottom .third:hover img {
   scale: 1.1;
+}
+
+.sec-4 {
+  width: 100%;
+  background-color: white;
+  padding: 200px 0px;
+}
+.sec-4 .sec-4-center {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.sec-4 .sec-4-center .bottom {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(4, auto);
+  gap: 5px;
+}
+.sec-4 .sec-4-center .bottom div {
+  background-color: cyan;
 }/*# sourceMappingURL=style.css.map */
