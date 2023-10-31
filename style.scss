@@ -94,13 +94,14 @@ nav {
 
 }
 
-.sec-1{
+.sec-1 {
     @include center($back-color, 100px 0px);
     clip-path: polygon(0% 0%,
-    100% 0%,
-    100% calc(100% - 7rem),
-    0 100%);
-    .sec-1-center{
+            100% 0%,
+            100% calc(100% - 7rem),
+            0 100%);
+
+    .sec-1-center {
         width: 100%;
         height: 400px;
         display: grid;
@@ -108,19 +109,22 @@ nav {
         gap: 50px;
         padding: 0px 20px;
 
-        .left{
+        .left {
             background-image: url("https://preview.colorlib.com/theme/gourmet/img/hero_1.jpg.webp");
             @include img;
             width: 500px;
             height: 350px;
         }
-        .right{
+
+        .right {
             @include display(center, flex-start);
             flex-direction: column;
-            h1{
+
+            h1 {
                 font-size: 50px;
                 position: relative;
-                &:after{
+
+                &:after {
                     content: "";
                     background-color: $after-color;
                     top: -10px;
@@ -130,7 +134,8 @@ nav {
                     height: 3px;
                 }
             }
-            p{
+
+            p {
                 color: $p-color;
                 width: 80%;
                 font-size: 20px;
@@ -140,7 +145,7 @@ nav {
                 // overflow: hidden;
 
             }
-            
+
             img {
                 width: 150px;
                 height: 100px;
@@ -149,25 +154,29 @@ nav {
     }
 }
 
-.sec-2{
+.sec-2 {
     @include center(white, 50px 0px);
-    .sec-2-center{
+
+    .sec-2-center {
         width: 100%;
         height: 600px;
         @include display(space-between, center);
         flex-direction: column;
-        .top{
+
+        .top {
             color: white;
             width: 50%;
             height: 5%;
             @include display;
             flex-direction: column;
             text-align: center;
-            h1{
+
+            h1 {
                 color: black;
                 font-size: 60px;
                 position: relative;
-                &:after{
+
+                &:after {
                     content: "";
                     background-color: $after-color;
                     top: -20px;
@@ -177,30 +186,36 @@ nav {
                     height: 3px;
                 }
             }
-            p{
+
+            p {
                 padding: 20px 0px;
-                font-size:18px;
+                font-size: 18px;
                 color: $p-color;
             }
         }
-        .bottom{
+
+        .bottom {
             width: 100%;
             height: 80%;
             display: grid;
             grid-template-columns: repeat(3, auto);
             gap: 20px;
-            div{
+
+            div {
                 background-color: coral;
                 @include img;
             }
-            .first{
-                background-image: url(	https://preview.colorlib.com/theme/gourmet/img/dishes_1.jpg);
+
+            .first {
+                background-image: url(https://preview.colorlib.com/theme/gourmet/img/dishes_1.jpg);
             }
-            .second{
-                background-image: url(	https://preview.colorlib.com/theme/gourmet/img/about_1.jpg);
+
+            .second {
+                background-image: url(https://preview.colorlib.com/theme/gourmet/img/about_1.jpg);
             }
-            .third{
-                background-image: url(	https://preview.colorlib.com/theme/gourmet/img/dishes_3.jpg);
+
+            .third {
+                background-image: url(https://preview.colorlib.com/theme/gourmet/img/dishes_3.jpg);
             }
         }
 
@@ -210,29 +225,33 @@ nav {
 
 
 
-.sec-3{
+.sec-3 {
     @include center(white, 200px 0px);
     clip-path: polygon(0% 0%,
-    100% 0%,
-    100% calc(100% - 7rem),
-    0 100%);
-    .sec-3-center{
+            100% 0%,
+            100% calc(100% - 7rem),
+            0 100%);
+
+    .sec-3-center {
         width: 100%;
         height: 600px;
         @include display(space-between, center);
         flex-direction: column;
-        .top{
+
+        .top {
             color: white;
             width: 50%;
             height: 5%;
             @include display;
             flex-direction: column;
             text-align: center;
-            h1{
+
+            h1 {
                 color: black;
                 font-size: 60px;
                 position: relative;
-                &:after{
+
+                &:after {
                     content: "";
                     background-color: $after-color;
                     top: -20px;
@@ -242,25 +261,31 @@ nav {
                     height: 3px;
                 }
             }
-            p{
+
+            p {
                 padding: 20px 0px;
-                font-size:18px;
+                font-size: 18px;
                 color: $p-color;
             }
         }
-        .bottom{
+
+        .bottom {
             width: 100%;
             height: 80%;
             display: grid;
             grid-template-columns: repeat(3, auto);
             gap: 20px;
-            .first, .second, .third{
+
+            .first,
+            .second,
+            .third {
                 background-color: coral;
                 overflow: hidden;
                 position: relative;
                 @include display;
-                cursor:pointer; 
-                .text{
+                cursor: pointer;
+
+                .text {
                     position: absolute;
                     z-index: 2;
                     @include display;
@@ -270,28 +295,31 @@ nav {
                     gap: 30px;
                     color: white;
                 }
-                img{
+
+                img {
                     @include img;
                     width: 100%;
                     height: 100%;
                     transition: all 1s ease;
 
                 }
-            &:after{
-                content: "";
-                position: absolute;
-                background-color: rgba($color: #000000, $alpha: 0.5);
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                @include display;
-                font-size: 30px;
 
-            }
-            &:hover img{
-                scale: 1.1;
-            }
+                &:after {
+                    content: "";
+                    position: absolute;
+                    background-color: rgba($color: #000000, $alpha: 0.5);
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    @include display;
+                    font-size: 30px;
+
+                }
+
+                &:hover img {
+                    scale: 1.1;
+                }
 
             }
 
@@ -300,28 +328,161 @@ nav {
     }
 }
 
-.sec-4{
-    @include center(white, 200px 0px);
-    .sec-4-center{
+.sec-4 {
+    @include center(aliceblue, 200px 0px);
+    padding-bottom: 400px;
+    clip-path: polygon(0% 0%,
+    100% 0%,
+    100% calc(100% - 7rem),
+    0 100%);
+
+    .sec-4-center {
         width: 100%;
-        height: 300px;
+        height: 1000px;
         @include display(space-between, center);
         flex-direction: column;
-        gap: 20px;
-        .bottom{
+        gap: 100px;
+        .top {
+            color: white;
+            width: 50%;
+            height: 5%;
+            @include display;
+            flex-direction: column;
+            text-align: center;
+            h1 {
+                color: black;
+                font-size: 60px;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    background-color: $after-color;
+                    top: -20px;
+                    left: 25%;
+                    position: absolute;
+                    width: 100px;
+                    height: 3px;
+                }
+            }
+        } 
+        .bottom {
             width: 100%;
             height: 100%;
             display: grid;
-            grid-template-columns: repeat(4, auto);
-            grid-template-rows: repeat(4, auto);
+            grid-template-columns: repeat(2, auto);
+            grid-template-rows: repeat(2, auto);
             gap: 5px;
-            div{
-                background-color: cyan;
+            // padding:20px 0px;
+
+            .grid-4lu {
+                width: 100%;
+                height: 100%;
+                display: grid;
+                grid-template-columns: repeat(2, auto);
+                grid-template-rows: repeat(2, auto);
+
+                .img {
+                    @include img;
+                }
+                .img-1 {
+                    background-image: url(https://preview.colorlib.com/theme/gourmet/img/dishes_4.jpg);
+                }
+                .img-2{
+                    background-image: url(https://preview.colorlib.com/theme/gourmet/img/dishes_1.jpg);
+                }
+                .img-3{
+                    background-image: url(https://preview.colorlib.com/theme/gourmet/img/dishes_2.jpg);
+                }
+                .img-4{
+                    background-image: url(https://preview.colorlib.com/theme/gourmet/img/dishes_3.jpg)
+                }
+
+                .text {
+                    @include display(center, flex-start);
+                    flex-direction: column;
+                    gap: 20px;
+                    padding: 20px;
+
+                    h4 {
+                        font-size: 25px;
+                    }
+
+                    h2 {
+                        font-size: 30px;
+                        color: $after-color;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        color: $p-color;
+                    }
+                }
             }
-            .img{
- 
+
+            div {
+                background-color: white;
             }
+
         }
     }
 
+}
+
+.sec-5{
+    @include center(white, 100px 0px);
+    padding-bottom: 200px;
+    clip-path: polygon(0% 0%,
+    100% 0%,
+    100% calc(100% - 7rem),
+    0 100%);
+    .sec-5-center{
+        @include display;
+        flex-direction: column;
+        gap: 130px;
+        .top {
+            color: white;
+            width: 50%;
+            height: 5%;
+            @include display;
+            flex-direction: column;
+            text-align: center;
+            h1 {
+                color: black;
+                font-size: 60px;
+                position: relative;
+
+                &:after {
+                    content: "";
+                    background-color: $after-color;
+                    top: -20px;
+                    left: 25%;
+                    position: absolute;
+                    width: 100px;
+                    height: 3px;
+                }
+            }
+        } 
+        .bottom{
+            @include display(center, flex-start);
+            flex-direction: column;
+            width: 60%;
+            gap: 20px;
+            #first{
+                font-size: 30px;
+            }
+            .author{
+                @include display;
+                gap: 20px;
+                img{
+                    width: 90px;
+                    height: 90px;
+                    border-radius: 9999px;
+                }
+                .author-info{
+                    @include display;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
 }
