@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+* a {
+  text-decoration: none;
+}
 
 .container {
   max-width: 1440px;
@@ -20,6 +23,8 @@ nav {
      object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 2;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), 0 100%);
           clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), 0 100%);
 }
@@ -90,6 +95,11 @@ nav .text p a {
   padding: 100px 0px;
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), 0 100%);
           clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), 0 100%);
+  margin-top: -200px;
+  position: absolute;
+  z-index: 1;
+  padding-top: 400px;
+  padding-bottom: 200px;
 }
 .sec-1 .sec-1-center {
   width: 100%;
@@ -143,19 +153,19 @@ nav .text p a {
   width: 100%;
   background-color: white;
   padding: 50px 0px;
+  margin-top: 1000px;
 }
 .sec-2 .sec-2-center {
   width: 100%;
-  height: 600px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  gap: 30px;
 }
 .sec-2 .sec-2-center .top {
   color: white;
   width: 50%;
-  height: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -171,7 +181,8 @@ nav .text p a {
   content: "";
   background-color: #ff7404;
   top: -20px;
-  left: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
   width: 100px;
   height: 3px;
@@ -183,13 +194,12 @@ nav .text p a {
 }
 .sec-2 .sec-2-center .bottom {
   width: 100%;
-  height: 80%;
+  height: 600px;
   display: grid;
   grid-template-columns: repeat(3, auto);
   gap: 20px;
 }
 .sec-2 .sec-2-center .bottom div {
-  background-color: coral;
   background-size: cover;
   -o-object-fit: cover;
      object-fit: cover;
@@ -207,6 +217,7 @@ nav .text p a {
 }
 
 .sec-3 {
+  margin-top: 100px;
   width: 100%;
   background-color: white;
   padding: 200px 0px;
@@ -240,7 +251,8 @@ nav .text p a {
   content: "";
   background-color: #ff7404;
   top: -20px;
-  left: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
   width: 100px;
   height: 3px;
@@ -319,9 +331,9 @@ nav .text p a {
   width: 100%;
   background-color: aliceblue;
   padding: 200px 0px;
-  padding-bottom: 400px;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), 0 100%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), 0 100%);
+  padding-bottom: 600px;
+  -webkit-clip-path: polygon(0 7%, 100% 0, 100% 94%, 0% 100%);
+  clip-path: polygon(0 7%, 100% 0, 100% 94%, 0% 100%);
 }
 .sec-4 .sec-4-center {
   width: 100%;
@@ -351,7 +363,8 @@ nav .text p a {
   content: "";
   background-color: #ff7404;
   top: -20px;
-  left: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
   width: 100px;
   height: 3px;
@@ -418,8 +431,8 @@ nav .text p a {
   background-color: white;
   padding: 100px 0px;
   padding-bottom: 200px;
-  -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), 0 100%);
-          clip-path: polygon(0% 0%, 100% 0%, 100% calc(100% - 7rem), 0 100%);
+  -webkit-clip-path: polygon(0 7%, 100% 0, 100% 94%, 0% 100%);
+  clip-path: polygon(0 7%, 100% 0, 100% 94%, 0% 100%);
 }
 .sec-5 .sec-5-center {
   display: flex;
@@ -447,7 +460,8 @@ nav .text p a {
   content: "";
   background-color: #ff7404;
   top: -20px;
-  left: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   position: absolute;
   width: 100px;
   height: 3px;
@@ -479,4 +493,195 @@ nav .text p a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.sec-6 {
+  width: 100%;
+  background-color: aliceblue;
+  padding: 100px 0px;
+  padding: 300px 0px;
+  -webkit-clip-path: polygon(0 7%, 100% 0, 100% 90%, 0% 100%);
+  clip-path: polygon(0 7%, 100% 0, 100% 90%, 0% 100%);
+}
+.sec-6 .sec-6-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 50px;
+}
+.sec-6 .sec-6-center .top {
+  color: white;
+  width: 50%;
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+.sec-6 .sec-6-center .top h1 {
+  color: black;
+  font-size: 60px;
+  position: relative;
+}
+.sec-6 .sec-6-center .top h1:after {
+  content: "";
+  background-color: #ff7404;
+  top: -20px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100px;
+  height: 3px;
+}
+.sec-6 .sec-6-center .bottom {
+  width: 100%;
+}
+.sec-6 .sec-6-center .bottom .blogs .blog {
+  background-color: white;
+  width: 100%;
+}
+.sec-6 .sec-6-center .bottom .blogs .blog .img {
+  width: 100%;
+  height: 300px;
+  background-image: url(https://preview.colorlib.com/theme/gourmet/img/dishes_2.jpg);
+  background-size: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.sec-6 .sec-6-center .bottom .blogs .blog .text {
+  padding: 40px 20px;
+}
+.sec-6 .sec-6-center .bottom .blogs .blog .text h4 {
+  color: #ff7404;
+}
+.sec-6 .sec-6-center .bottom .blogs .blog .text button {
+  padding: 10px 20px;
+  background-color: #ff7404;
+  color: white;
+  border: none;
+}
+
+footer {
+  max-width: 100%;
+  padding: 100px 0px;
+}
+footer .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 100px;
+}
+footer .center .grid {
+  width: 100%;
+  min-height: 400px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 100px;
+  font-size: 19px;
+}
+footer .center .grid .first {
+  width: 33%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .center .grid .first .icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: #ff7404;
+}
+footer .center .grid .second {
+  width: 33%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 30px;
+}
+footer .center .grid .second #adress {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+footer .center .grid .third {
+  width: 33%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .center .grid .third a {
+  color: #ff7404;
+}
+footer .center .row span {
+  color: #ff7404;
+}
+
+@media screen and (max-width: 992px) {
+  .sec-1 .sec-1-center {
+    grid-template-columns: repeat(1, auto);
+    padding-bottom: 700px;
+  }
+  .sec-2 {
+    margin-top: 1200px;
+  }
+  .sec-2 .sec-2-center .bottom {
+    grid-template-columns: repeat(1, auto);
+    height: 2000px;
+  }
+  .sec-4 {
+    padding-bottom: 1800px;
+    padding-top: 300px;
+  }
+  .sec-4 .sec-4-center .bottom {
+    grid-template-columns: repeat(1, auto);
+  }
+  .sec-5 {
+    margin-top: 0;
+  }
+  .sec-5 .sec-5-center .bottom {
+    width: 100%;
+  }
+  footer .center .grid {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  footer .center .row {
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 576px) {
+  .sec-3 .sec-3-center .bottom .first .img {
+    width: 100%;
+  }
+  .sec-3 .sec-3-center .bottom .second,
+  .sec-3 .sec-3-center .bottom .third {
+    display: none;
+  }
+  .sec-4 {
+    padding-bottom: 1300px;
+    padding-top: 300px;
+    width: 100%;
+  }
+  .sec-4 .sec-4-center .bottom {
+    grid-template-columns: repeat(1, auto);
+  }
+  .sec-4 .sec-4-center .bottom .grid-4lu {
+    grid-template-columns: repeat(1, auto);
+  }
 }/*# sourceMappingURL=style.css.map */
